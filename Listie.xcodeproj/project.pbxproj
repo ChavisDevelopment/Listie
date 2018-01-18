@@ -14,9 +14,12 @@
 		91601F77200817020082F7B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91601F76200817020082F7B1 /* Assets.xcassets */; };
 		91601F7A200817020082F7B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91601F78200817020082F7B1 /* LaunchScreen.storyboard */; };
 		91601F89200AF44E0082F7B1 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91601F87200AF44E0082F7B1 /* DataModel.xcdatamodeld */; };
+		996438E3EC4E2BD8176B6FDB /* Pods_Listie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78C85686F0955FA4F3B5AAA /* Pods_Listie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25EB746BF62F5F42AB64E9C4 /* Pods-Listie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listie/Pods-Listie.debug.xcconfig"; sourceTree = "<group>"; };
+		2A76B7C457479BADD7E2C665 /* Pods-Listie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listie/Pods-Listie.release.xcconfig"; sourceTree = "<group>"; };
 		9109B337200FD111003F10D3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		91601F6C200817020082F7B1 /* Listie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91601F6F200817020082F7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		91601F79200817020082F7B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91601F7B200817020082F7B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91601F88200AF44E0082F7B1 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		B78C85686F0955FA4F3B5AAA /* Pods_Listie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996438E3EC4E2BD8176B6FDB /* Pods_Listie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		705A3763C0A5C0A0B9E53F5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B78C85686F0955FA4F3B5AAA /* Pods_Listie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91601F63200817020082F7B1 = {
 			isa = PBXGroup;
 			children = (
 				91601F6E200817020082F7B1 /* Listie */,
 				91601F6D200817020082F7B1 /* Products */,
+				CB753B1846BBAAFBB50C1EA6 /* Pods */,
+				705A3763C0A5C0A0B9E53F5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CB753B1846BBAAFBB50C1EA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25EB746BF62F5F42AB64E9C4 /* Pods-Listie.debug.xcconfig */,
+				2A76B7C457479BADD7E2C665 /* Pods-Listie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91601F7E200817020082F7B1 /* Build configuration list for PBXNativeTarget "Listie" */;
 			buildPhases = (
+				334FE7F21A939E2F8BCAC107 /* [CP] Check Pods Manifest.lock */,
 				91601F68200817020082F7B1 /* Sources */,
 				91601F69200817020082F7B1 /* Frameworks */,
 				91601F6A200817020082F7B1 /* Resources */,
+				73D422D6318D4955B8605DAD /* [CP] Embed Pods Frameworks */,
+				D148E9833AF13FFEA61B3F41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		334FE7F21A939E2F8BCAC107 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Listie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D422D6318D4955B8605DAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Listie/Pods-Listie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listie/Pods-Listie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D148E9833AF13FFEA61B3F41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listie/Pods-Listie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91601F68200817020082F7B1 /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		91601F7F200817020082F7B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EB746BF62F5F42AB64E9C4 /* Pods-Listie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		91601F80200817020082F7B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A76B7C457479BADD7E2C665 /* Pods-Listie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
