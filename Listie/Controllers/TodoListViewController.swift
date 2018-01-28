@@ -73,12 +73,14 @@ class TodoListViewController: UITableViewController{
         
         let alert = UIAlertController(title: "Add new Listie item", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add item", style: .default) { (action) in
+            
             //What will happen when user click add item button
             if let currentCategory = self.selectedCategory {
                 do {
                 try self.realm.write {
                     let newItem = Item()
                     newItem.title = textField.text!
+                    newItem.dateCreated = Date()
                     currentCategory.items.append(newItem)
                 }
                 }catch {
@@ -87,11 +89,11 @@ class TodoListViewController: UITableViewController{
             }
             self.tableView.reloadData()
         }
+        
         //Creates textfield in alert
         alert.addTextField(configurationHandler: { (alertTextField) in
             alertTextField.placeholder = "Create new item"
             textField = alertTextField
-            print("Now")
         })
         //Presnets the alert
         alert.addAction(action)
@@ -130,8 +132,8 @@ class TodoListViewController: UITableViewController{
 //MARK: - Search bar Methods
 extension TodoListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
-        
+        todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
+        tableView.reloadData()
         
     }
 //        let request : NSFetchRequest<Item> = Item.fetchRequest()
